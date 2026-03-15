@@ -4,9 +4,17 @@
 # Claude reads the pending file at session start and synthesizes the update.
 
 CONFIG_FILE="$HOME/.claude/sidekick_config"
+NAME_FILE="$HOME/.claude/sidekick_name"
 TIMESTAMP_FILE="$HOME/.claude/sidekick_last_sync"
 PENDING_FILE="$HOME/.claude/sidekick_pending.txt"
 PROJECTS_DIR="$HOME/.claude/projects"
+
+# Load name
+if [ -f "$NAME_FILE" ]; then
+  SIDEKICK_NAME=$(cat "$NAME_FILE")
+else
+  SIDEKICK_NAME="Sidekick"
+fi
 
 # Load path from config file
 if [ -f "$CONFIG_FILE" ]; then
@@ -104,4 +112,4 @@ PENDING
 date +%s > "$TIMESTAMP_FILE"
 
 # Brief message — Claude handles the EA-style opener after synthesizing
-echo "I've got some catching up to do from your last session. Give me a moment..."
+echo "$SIDEKICK_NAME here. Got some catching up to do from your last session. Give me a moment..."

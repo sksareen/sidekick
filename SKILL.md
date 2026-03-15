@@ -18,6 +18,12 @@ Ask the user: "Where should I store your Sidekick profile? Default is ~/.claude/
 Resolve the full absolute path (expand ~ to the actual home directory).
 Write that absolute path to `~/.claude/sidekick_config` (a single line, no quotes).
 
+### Step 1b: Name your Sidekick
+Ask: "What do you want to call them? (e.g. Jarvis, Friday, Max — or just hit enter to skip)"
+If the user provides a name, store it. Use it throughout the profile and in all future interactions.
+If skipped, default to "Sidekick".
+Write the name to `~/.claude/sidekick_name` (single line).
+
 ### Step 2: Build the initial profile
 Read the following in order — most current first:
 
@@ -94,13 +100,14 @@ If confirmed:
 - Overwrite sidekick.md with the blank template below
 - Reset ~/.claude/sidekick_last_sync to current timestamp
 - Delete ~/.claude/sidekick_pending.txt if it exists
+- Ask: "Same name or want to rename them?" — update ~/.claude/sidekick_name if changed
 
 ---
 
 ## sidekick.md Template
 
 ```markdown
-# Sidekick
+# NAME
 
 <!-- Auto-maintained by Sidekick. Sync runs at session start. -->
 <!-- Last synced: TIMESTAMP -->
