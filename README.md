@@ -1,5 +1,7 @@
 # Sidekick
 
+> A **Claude Code skill** that gives Claude persistent memory and identity across sessions.
+
 **Give Claude Code a memory. Make it yours.**
 
 Claude Code forgets you every session. Sidekick fixes that — it builds a persistent profile of who you are from how you actually work, not from what you tell it about yourself. Every session, it picks up where it left off.
@@ -45,6 +47,8 @@ Then Claude opens with the one thing that matters most, and asks what you want t
 ---
 
 ## Install
+
+Requires [Claude Code](https://claude.ai/code) (the CLI tool by Anthropic).
 
 ```bash
 # 1. Copy the skill to your Claude Code skills folder
