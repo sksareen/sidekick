@@ -4,6 +4,8 @@
 
 **Give Claude Code a memory. Make it yours.**
 
+![Sidekick demo](demo.gif)
+
 Claude Code forgets you every session. Sidekick fixes that — it builds a persistent profile of who you are from how you actually work, not from what you tell it about yourself. Every session, it picks up where it left off.
 
 ---
